@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Our Latest Feature!</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        .container {
+            max-width: 600px;
+        }
+    </style>
+</head>
+
+<body class="p-5 bg-light">
+    <section class="container p-0 mx-auto bg-white rounded-3 border">
+        <div class="p-4">
+            <div>
+                <h1 class="mb-4 fw-bold fs-5">Introducing Our New Feature: <strong>BoilerBoost</strong>!</h1>
+                <p>Hey <span th:text="${user.name}"></span>,</p>
+                <p>We're excited to announce our latest feature, <strong>BoilerBoost</strong>, designed to supercharge
+                    your workflow and help you achieve your goals faster.</p>
+                <p>With BoilerBoost, you can:</p>
+                <ul>
+                    <li><strong>Automate repetitive tasks</strong> with ease</li>
+                    <li><strong>Collaborate in real-time</strong> with your team</li>
+                    <li><strong>Track your progress</strong> and optimize your performance</li>
+                </ul>
+                <p>This powerful new tool is available now, and we’d love for you to give it a try!</p>
+            </div>
+
+            <div class="text-center">
+                <figure class="block ratio ratio-16x9 bg-light rounded overflow-hidden">
+                    <img src="http://localhost:8080/google.jpg" class="img-fluid" alt="BoilerBoost Feature" />
+                </figure>
+
+                <div class="my-4">
+                    <p>Take your productivity to the next level with BoilerBoost!</p>
+                    <a class="btn btn-success" th:href="@{${featureLink}}" th:text="'Try BoilerBoost Now'">Try
+                        BoilerBoost
+                        Now</a>
+                </div>
+            </div>
+
+            <div>
+                <p>Ready to experience the power of BoilerBoost? Click the button above and start boosting your
+                    productivity today!</p>
+            </div>
+        </div>
+
+        <div class="p-4">
+            <div class="w-50 border-top">
+                <p class="mt-4 lh-sm">Best regards,</p>
+                <p class="fw-bold mb-0 lh-sm">The Boilerlabs Team</p>
+                <a href="mailto:support@boilerlabs.com">support@boilerlabs.com</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container my-4">
+        <p class="mb-0 text-body-tertiary">Boilerlabs</p>
+        <p class="mb-0 text-body-tertiary">Somewhere around the globe.</p>
+        <p class="mb-0 text-body-tertiary">Earth</p>
+    </footer>
+</body>
+
+</html>
