@@ -28,7 +28,7 @@ public class EmailController {
         emailService.sendSimpleEmail(emailRecord);
     }
 
-    @PostMapping("/welcome")
+    @PostMapping("/send-template")
     public void sendWelcomeEmail(
             @RequestBody EmailRequestRecord emailRequestRecord) {
         String emailSubject = "Welcome to Boilerlabs!";
@@ -43,4 +43,5 @@ public class EmailController {
         String htmlContent = templateEngine.process("welcome-email", context);
         emailService.sendTemplateMail(emailRecord, htmlContent);
     }
+
 }
